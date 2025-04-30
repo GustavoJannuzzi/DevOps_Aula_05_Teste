@@ -4,7 +4,8 @@ echo "Esperando o servidor iniciar..."
 sleep 3
 
 echo "Executando teste..."
-response=$(curl -s http://app:3000/)
+response=$(curl -s http://node-app:3000/)
+
 expected='{"message":"Servidor Node no ar!"}'
 
 if [ "$response" = "$expected" ]; then
